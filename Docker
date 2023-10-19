@@ -1,0 +1,96 @@
+image -- In Docker, an image is a read-only template that contains a set of instructions for creating a container. It is a snapshot of a Docker container that includes everything needed to run an application, including the code, runtime, system tools, libraries, and settings.
+
+containers -- are the isolated environments in which we can run our applications.Each container has an ID.
+
+docker run hello-world ==> docker run the hello world image --> pulls the image from the docker file -->displays the latest hello world image downloaded.
+
+docker run -it ubuntu ==> docker run in the interactive environment ubuntu -->same as above ie it downloads the ubuntu image.
+-it --> interactive environment.meaning, we are inside the container.
+
+checkout docherhub for the images.
+
+docker images also contain the operating system files along with the dependancies to run the particular image.
+
+we can directly download the image as well. ex: sudo docker pull mysql.
+
+if we want to download the image of a particular version then
+-sudo pull ubuntu:16.04
+
+To check the containers that are running: sudo docker ps
+
+sudo docker container ls : shows all the containers. 
+
+sudo docker container exec -it 'container ID' bash --> the bash shell should be attached to the running container, so that we can go inside the container and we do our things.
+
+to stop the container : sudo docker stop 'container ID'
+
+sudo docker ps -a : shows the containers that are stopped.
+
+sudo docker rm 'container ID' : removes the container.
+
+sudo docker inspect 'container ID' : gives all the information about the container.
+ 
+sudo docker logs 'container ID' : all the things that are output are mentioned here.
+
+sudo docker container prune -f : deletes all the containers that are stopped.
+
+sudo docker run alpine ping www.civo.com 
+
+sudo docker run -d alpine ping url: d for detached i.e it runs in the background.
+
+sudo docker run ubuntu Hey : prints Hey in the terminal.
+
+sudo docker logs --since 5s f56b : shows the container with ID starting ;f56b' running from last 5 seconds 
+
+sudo docker stop f56b : stops the container.
+
+sudo docker rmi alpine -f : deletes the specified container.
+
+sudo docker run -d -p 8080:80 nginx : this runs the nginx image on the local system. Nginx is a web server whose default port is 80.
+
+Docker commit :
+
+sudo docker run -it ubuntu
+ls
+touch names.txt
+echo "Hey, my name is Akshay">>names.txt
+cat names.txt -- displays Hey, my name is Akshay
+
+to download ubuntu image that has names.txt -- we use docker commit.
+
+sudo docker ps -a -- copy the id
+sudo docker start d10c04316b79
+sudo docker exec -it d10c04316b79 bash
+ls -- shows names.txt present in it.
+
+If we want to create image out of it then, we can use commit.
+
+sudo docker commit -m "added names.txt file" d10c04316b79 names_ubuntu
+here, -m -- message 
+      names_ubuntu -- name given by us for the image to be created.
+sudo docker images -- names_ubuntu will be present.
+
+sudo docker run -it names_ubuntu
+
+sudo docker images -q -- gives IDs of the images.
+
+sudo docker rmi $(sudo docker images -q) -- removes all the images.
+
+Layers : image is a collection of files.each file has a hash value.
+
+Creating a Docker image :      
+     
+touch Dockerfile
+vi Dockerfile
+
+https://zaggle.lms.simplilearn.com/
+
+
+Docker compose:
+delete all images : sudo docker rm -f (docker image ls -q)
+delete all the container : sudo docker rm -f $(docker container -aq)
+
+
+yaml file 
+
+yaml is prefered over json file here.

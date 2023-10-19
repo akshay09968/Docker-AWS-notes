@@ -1,0 +1,167 @@
+Before cloud computing -- 1. Buy stack of servers
+			  2. More server => High traffic
+			  3. Monitoing and maintaining the servers
+			  
+Why cloud?
+
+-- everything is done online --> lot of data --> needs more space
+
+
+cloud -- collection of data centers -- data center is where we store data and host applications -- cloud enables to orchestrate functions,applications,managing the resources.
+
+cloud -- we can rent the services that are needed.We can focus more on business and let cloud do the work.
+
+cloud computing -- STORE(servers)
+		   PROCESS(servers)
+		   ACCESS(internet)
+
+Servce models -- SaaS - consuming services that is maintained and handled by someone else.
+		 PaaS - provides platform to create our own applications.
+		 IaaS - provides virtual computing resources over the internet.
+		 		 
+Deployment models -- public cloud
+		     private cloud
+		     hybrid cloud 
+
+
+Cloud providers -- AWS,GCP,Azure,IBM cloud.
+
+Amazon Web Services:
+
+pay-as-you-go model
+
+AWS has global architecture.
+
+Domains of AWS:
+
+1.compute AWS EC2
+2.Migration
+3.Security and compliance
+4.Storage AWS S3
+5.Networking
+6.Messaging
+7.Database
+8.Management tools
+
+Instance  -- virtual server for running applicatons on Amazon EC2.
+
+VIRTUAL MACHINE == INSTANCE in AWS.
+
+
+Types of instance:-
+
+1.General purpose instance
+2.
+
+
+
+
+
+
+EC2 instance based on Pricing models: on demand ,  dedicated(security costly) ,  on spot(bidding),    reserved
+EC2 instance based on their functionality : Burstable (20 % or it can increase), EBS optimized, cluster networking, dedicated(data secuity).
+
+Key pair is used to login into instance. its like  double security for our instance . Create an instance key and save it. We cannot lose it.
+
+Actions >> instance settings >> change t2/t3 unlimited, change termination protection. 
+then create instance.
+
+AMI(Amazon Machine Image) -- is an image. we can launch an AMI of our instance.
+
+AWS lamda:
+
+ AWS compute domain: 3 main services : EC2  Elastic beanstalk  AWS Lamda
+ 
+ AWS lamda is the automated version of EC2. No worries of the underlying architecture.
+ Mainly used for executing background tasks is the main differnce between EC2 and lamda.
+ 
+ 
+ AWS Beanstalk : is a PaaS used for deploying and scaling web applications and services developed with java,.net,php,nodeJS on similar servers such as apache,Nginx,tomcat,and IIS.
+ 
+ advantages :
+  quicker deployment
+  simplifies operation
+  cost effectiveness
+  multi tenant architecture - makes easier for the users to share applications on different devices with high security.
+  better user interface
+  
+  elastic web server environment : screenshot ss
+  
+ 
+ cloud storage : used for emails, media, holds services and backup.
+ 
+ cloud storage practices: 
+  1 scrutinize SLA
+  2 follow your business needs
+  3 ensure security
+  4 plan the storage future 
+  5 Beware of hidden costs (understand which services costs how much in pay as you go model)
+  
+  Amazon s3
+  Bucket - where we put in //and store the data is called as bucket.
+ 
+ amazon s3 : simple web service interface that can use to store and retrieve any amount of data , at any time , from anywhere around the world.
+ 
+ buckets and objects :
+  objects: files, data. data+meta data(key + version ID). 
+  buckets : conatiners that holds the data.
+  
+ s3 storage classes: standard, infrequent access and glacier (ss)
+ 
+ versioning: to keep multiple versions of an object in one bucket.
+ 
+ s3 cross region replication: ss
+ s3 data transfer acceleration : ss
+ 
+AWS networking services : VPC, direct connect and route53 (ss)
+
+AWS cloudFront : 
+ 
+AWS monitoring: ss
+
+AWS cloudwatch : real time monitoing tool of AWS resources and customer applications running on Amazon infrastructure.
+ 1 metrics
+ 2 dimensions 
+ 3 statistics
+ 4 alarm	
+ 
+working : ss
+
+Amazon cloudWatch events : a near real time stream of system events that allows us to monitor and respond to changes in our AWS resources by means of rules that route events to one or more targets.
+
+events rules targets : ss
+working : ss
+
+Amazon cloudwatch logs: is used to monitor, store and access log files from AWS resources like Amazon ec2 intances, amzon CloudTrail, route53 and others.
+
+features of cloudWatch logs : amazon ec2, log retention, log storage and DNS queries (ss)
+
+AWS CloudFormation : is a service that helps you model and set up AWS resouces so that you can spend less time managing the resources and more time focusing on our applications that runs in AWS.
+
+JSON script : javascript oject notation is a standard format that uses human-readable text to transmit data consisting of attribute-value pairs.
+
+Autoscaling and load balancer
+
+ snapsots and AMIs (Amazon Machine Image) : ss 
+
+2 types of load balancers: classic and application (ss)
+
+
+cloud security: 
+ step 1 : monitoing data ( with the help of cloudwatch)
+ step 2 : cloudTrail : is logging services which can be used to log history of the API calls.
+ step 3 : managing access : AWS IAM
+ 
+ why do we need Access management?
+ -> IAM identify and access management is a web service thats helps us securely control access to AWS resources for your users. IAM for authentication and authorization.
+ components : 
+ users groups roles policies
+ 
+ Amazon Redshift:
+  Architecture of Amazon data warehouse:
+  
+  
+ key points in redshift : 
+ 1 clusters and nodes (ss)
+  
+
