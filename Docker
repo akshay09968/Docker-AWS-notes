@@ -97,7 +97,7 @@ yaml is prefered over json file here.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
-
+A container is a standardized unit of software development that holds everything that your software application requires to run. This includes relevant code, runtime, system tools, and system libraries. Containers are created from a read-only template that's called an image.
 
 Let's break down Docker, Docker images, and Docker containers in simple terms:
 
