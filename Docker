@@ -29,6 +29,11 @@ sudo docker ps -a : shows the containers that are stopped.
 sudo docker rm 'container ID' : removes the container.
 
 sudo docker inspect 'container ID' : gives all the information about the container.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Docker
  
 sudo docker logs 'container ID' : all the things that are output are mentioned here.
 
